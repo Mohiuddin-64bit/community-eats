@@ -88,7 +88,7 @@ const NavBar = () => {
               <ul className="inline-flex flex-row gap-5 px-1">
                 <li>
                   <Link
-                    className="font-secondary text-primary font-semibold text-base link-with-border"
+                    className="font-secondary text-white font-semibold text-base link-with-border"
                     to="/"
                   >
                     Home
@@ -96,7 +96,7 @@ const NavBar = () => {
                 </li>
                 <li>
                   <Link
-                    className="font-secondary text-primary font-semibold text-base link-with-border"
+                    className="font-secondary text-white font-semibold text-base link-with-border"
                     to="/supplies"
                   >
                     All Supplies
@@ -105,7 +105,7 @@ const NavBar = () => {
                 {user && (
                   <li>
                     <Link
-                      className="font-secondary text-primary font-semibold text-base link-with-border"
+                      className="font-secondary text-white font-semibold text-base link-with-border"
                       to="/dashboard"
                     >
                       Dashboard

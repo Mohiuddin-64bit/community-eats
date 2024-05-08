@@ -9,8 +9,8 @@
 }
 
 body {
-  background-color: theme("colors.light");
-  color: theme("colors.dark");
+  background-color: theme("colors.dark");
+  color: theme("colors.light");
 }
 
 /* ----- navbar ----- */
@@ -103,4 +103,14 @@ body {
 ::-webkit-scrollbar-thumb {
   background: theme("colors.primary");
   border-radius: 4px;
+}
+
+
+.header_fade-in {
+  background-image: linear-gradient(to top, #06060c, rgba(6, 6, 12, .71) 15%, rgba(6, 6, 12, 0) 26%);
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }

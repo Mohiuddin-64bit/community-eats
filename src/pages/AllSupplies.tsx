@@ -11,32 +11,32 @@ const AllSupplies = () => {
   const renderSuppliesCard = (supplies: TSuppliesTypes) => {
     return (
       <div className="w-full p-4">
-        <div className="bg-white rounded-lg overflow-hidden shadow-md">
+        <div className="bg-primary rounded-lg overflow-hidden shadow-md">
           <img
             src={supplies.imageLink}
             alt={supplies.title}
             className="w-full h-64 object-cover object-center"
           />
           <div className="p-4">
-            <h3 className="text-lg font-bold text-primary mb-2 font-primary">
+            <h3 className="text-lg font-bold text-white mb-2 font-primary">
               {supplies.title}
             </h3>
-            <p className="text-tertiary font-secondary mb-2">
+            <p className="text-white font-secondary mb-2">
               Category: {supplies.category}
             </p>
-            <p className="text-secondary font-primary font-semibold mb-2">
+            <p className="text-white font-primary font-semibold mb-2">
               Amount: $ {supplies.amount}
             </p>
             <div className="w-full flex justify-between">
               <div className="w-4/5 mr-4">
-                <p className="text-tertiary font-seconday">
+                <p className="text-white font-seconday">
                   {supplies.description?.slice(0, 80) +
                     (supplies.description.length > 80 ? "..." : "")}
                 </p>
               </div>
               <div className="w-1/5">
                 <Link to={`/donations/${supplies._id}`}>
-                  <button className="btn text-light bg-secondary border-0">
+                  <button className="btn text-light border-0">
                     View Details
                   </button>
                 </Link>
@@ -49,8 +49,8 @@ const AllSupplies = () => {
   };
 
   return (
-    <div className="container mx-auto mt-5 lg:mt-10 mb:8 lg:mb-16">
-      <h2 className="text-2xl lg:text-4xl text-center font-primary text-primary font-bold mb-4">
+    <div className="container mx-auto lg:pt-32 md:pt-24 pt-20">
+      <h2 className="text-2xl lg:text-4xl text-center font-primary text-white font-bold pb-4">
         All Supplies
       </h2>
       {isLoading ? (

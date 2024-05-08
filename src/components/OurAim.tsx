@@ -9,7 +9,7 @@ const OurAim = () => {
         />
       </div>
       <div className="w-full lg:w-1/2 flex flex-col justify-center px-5 lg:px-0">
-        <h1 className="flex flex-col lg:gap-3 text-2xl lg:text-5xl font-bold font-primary text-primary leading-10">
+        <h1 className="flex flex-col lg:gap-3 text-2xl lg:text-5xl font-bold font-primary text-white leading-10">
           We aim to better lives <span>and the world</span>{" "}
           <span>through kindness</span>
         </h1>
@@ -28,7 +28,7 @@ const OurAim = () => {
           offering mental health support services.
         </p>
         <div>
-          <button className="btn bg-secondary font-secondary text-light border-0">
+          <button className="btn bg-primary font-secondary text-light border-0">
             Learn More
           </button>
         </div>

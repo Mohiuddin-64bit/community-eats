@@ -10,7 +10,7 @@ import SignUp from "../pages/SignUp";
 import DashAllDonation from "../pages/Dashboard/DashAllDonation";
 import DashCreateDonation from "../pages/Dashboard/DashCreateDonation";
 import DashHome from "../pages/Dashboard/DashHome";
-import SingleDonation from "../pages/SingleDonation";
+import SingleDonation from "../pages/SingleSupplies";
 
 const router = createBrowserRouter([
   {

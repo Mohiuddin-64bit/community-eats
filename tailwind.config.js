@@ -13,12 +13,12 @@ export default {
         secondary: "#FFC400",
         tertiary: "#7e7e7e",
         light: "#fff",
-        dark: "#000",
+        dark: "#05050A",
       },
     },
   },
+  plugins: [require("daisyui")],
   daisyui: {
     themes: ["light", "dark", "cupcake"],
   },
-  plugins: [require("daisyui")],
 };

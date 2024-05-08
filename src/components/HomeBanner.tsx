@@ -13,6 +13,7 @@ const HomeBanner = () => {
         Your browser does not support the video tag.
       </video>
       <div className="absolute z-20 w-full h-full bg-black opacity-50"></div>
+      <div className="header_fade-in absolute z-20"></div>
 
       <div className="w-full text-center px-5 lg:px-0 relative z-20">
         <h1 className="font-primary text-white max-w-[35ch] mx-auto text-3xl md:text-5xl lg:text-6xl font-bold mb-2">
@@ -25,8 +26,8 @@ const HomeBanner = () => {
           need.
         </p>
       </div>
-      <button className="absolute flex items-center gap-3  z-30 bottom-5 left-1/2 transform -translate-x-1/2 px-5 py-3 backdrop-blur-sm bg-dark/30 hover:bg-dark transition-all text-white font-secondary text-lg rounded-lg">
-        See Our Work <MdArrowDownward />
+      <button className="absolute flex items-center gap-3 z-20 bottom-5 left-1/2 transform -translate-x-1/2 px-5 py-3 backdrop-blur-sm bg-dark/50 mb-32 hover:bg-dark transition-all text-white font-secondary text-lg rounded-lg">
+        See Our Work <MdArrowDownward className="text-secondary"/>
       </button>
     </div>
   );

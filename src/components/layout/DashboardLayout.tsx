@@ -8,12 +8,12 @@ const NavContent = (
     </Link>
     <Link to="/dashboard/create-donation">
       <li className="px-4 py-2 hover:bg-gray-800 cursor-pointer">
-        Create Donation
+        Create Supplies
       </li>
     </Link>
     <Link to="/dashboard/all-donation">
       <li className="px-4 py-2 hover:bg-gray-800 cursor-pointer">
-        All Donation
+        All Supplies
       </li>
     </Link>
     <Link to="/">
@@ -79,7 +79,7 @@ const DashboardLayout: React.FC = () => {
 
         {/* Main Content */}
         <main className="flex-1 bg-gray-100 p-6">
-          <div className="bg-white rounded-lg shadow-lg p-0 lg:p-6 mt-24 lg:mt-0">
+          <div className="bg-white text-dark rounded-lg shadow-lg p-0 lg:p-6 mt-24 lg:mt-0">
             <Outlet />
           </div>
         </main>

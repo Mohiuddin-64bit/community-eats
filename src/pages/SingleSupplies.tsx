@@ -2,10 +2,10 @@ import { useParams } from "react-router-dom";
 import { useGetSingleSuppliesQuery } from "../redux/features/supplies/suppliesApi";
 import Loading from "../components/Loading";
 
-const SingleDonation = () => {
-  const donationId = useParams().id;
+const SingleSupplies = () => {
+  const suppliesId = useParams().id;
 
-  const { data, isLoading, isError } = useGetSingleSuppliesQuery(donationId);
+  const { data, isLoading, isError } = useGetSingleSuppliesQuery(suppliesId);
 
   if (isLoading) {
     return <Loading />;
@@ -16,7 +16,7 @@ const SingleDonation = () => {
   }
 
   return (
-    <div className="container mx-auto mt-5 lg:mt-10 mb-8 lg:mb-16">
+    <div className="container mx-auto lg:pt-32 md:pt-24 pt-20">
       <div className="mx-auto">
         <div className="w-full lg:flex lg:items-center lg:justify-between">
           <div className="lg:w-1/2 p-3">
@@ -28,7 +28,7 @@ const SingleDonation = () => {
           </div>
 
           <div className="lg:w-1/2 p-3">
-            <h2 className="text-xl lg:text-5xl font-primary text-primary font-semibold lg:font-bold mb-4">
+            <h2 className="text-xl lg:text-5xl font-primary text-white font-semibold lg:font-bold mb-4">
               {data?.title}
             </h2>
             <p className="text-tertiary text-xl lg:text-2xl font-secondary mb-2">
@@ -45,4 +45,4 @@ const SingleDonation = () => {
   );
 };
 
-export default SingleDonation;
+export default SingleSupplies;
