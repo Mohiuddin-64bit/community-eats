@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: theme("colors.light");
+  color: theme("colors.dark");
+}
+
+/* ----- navbar ----- */
+.link-with-border {
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.link-with-border::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: theme("colors.dark");
+  transition: width 0.3s ease;
+}
+
+.link-with-border:hover::after {
+  width: 100%;
+}
+
+/* ----- login page ----- */
+.login-image {
+  background-image: url("/images/login-image.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-form {
+  background-image: url("/images/login-image.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .login-form {
+    background-image: none;
+  }
+}
+
+/* ----- signup page ----- */
+.signup-image {
+  background-image: url("/images/signup-image.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.signup-form {
+  background-image: url("/images/signup-image.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .signup-form {
+    background-image: none;
+  }
+}
+
+/* ----- custom input field ----- */
+.custom-input-field {
+  background-color: theme("colors.tertiary");
+  color: theme("colors.light");
+}
+
+.custom-input-field::placeholder {
+  color: theme("colors.light");
+}
+
+/* ----- heading tag background ----- */
+.heading-bg {
+  background-image: url("/images/headingbg.png");
+  width: 100%;
+}
+
+/* ----- scrollbar ----- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme("colors.secondary");
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme("colors.primary");
+  border-radius: 4px;
+}
