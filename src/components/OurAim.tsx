@@ -14,7 +14,7 @@ const OurAim = () => {
           <span>through kindness</span>
         </h1>
         <p className="font-secondary text-tertiary mt-5 mb-3">
-          The aim of our disaster donation organization is to provide immediate
+          The aim of our disaster supplies organization is to provide immediate
           relief and support to flood-affected individuals and communities, as
           well as to other natural disaster victims. Our goal is to improve the
           overall well-being and resilience of those affected by disasters by

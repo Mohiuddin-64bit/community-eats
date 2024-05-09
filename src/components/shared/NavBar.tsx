@@ -60,7 +60,7 @@ const NavBar = () => {
                   </li>
                   <li className="hover:ps-3 transition-all duration-300">
                     <Link
-                      to="/donations"
+                      to="/supplies"
                       className="font-secondary text-2xl font-bold text-light mb-2 border-b"
                     >
                       All Supplies

@@ -3,14 +3,14 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import ProtectedRoute from "../components/layout/ProtectedRoute";
 import DashboardLayout from "../components/layout/DashboardLayout";
-import AllDonations from "../pages/AllSupplies";
+import AllSupplies from "../pages/AllSupplies";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
-import DashAllDonation from "../pages/Dashboard/DashAllDonation";
-import DashCreateDonation from "../pages/Dashboard/DashCreateDonation";
+import DashAllSupplies from "../pages/Dashboard/DashAllSupplies";
+import DashCreateSupplies from "../pages/Dashboard/DashCreateSupplies";
 import DashHome from "../pages/Dashboard/DashHome";
-import SingleDonation from "../pages/SingleSupplies";
+import SingleSupplies from "../pages/SingleSupplies";
 
 const router = createBrowserRouter([
   {
@@ -25,15 +25,15 @@ const router = createBrowserRouter([
         path: "supplies",
         element: (
           <ProtectedRoute>
-            <AllDonations />
+            <AllSupplies />
           </ProtectedRoute>
         ),
       },
       {
-        path: "donations/:id",
+        path: "supplies/:id",
         element: (
           <ProtectedRoute>
-            <SingleDonation />
+            <SingleSupplies />
           </ProtectedRoute>
         ),
       },
@@ -56,34 +56,34 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "dashboard/donations",
+        path: "dashboard/supplies",
         element: (
           <ProtectedRoute>
-            <DashAllDonation />
+            <DashAllSupplies />
           </ProtectedRoute>
         ),
       },
       {
-        path: "create-donation",
+        path: "create-supplies",
         element: (
           <ProtectedRoute>
-            <DashCreateDonation />
+            <DashCreateSupplies />
           </ProtectedRoute>
         ),
       },
       {
-        path: "edit-donation/:id",
+        path: "edit-supplies/:id",
         element: (
           <ProtectedRoute>
-            <DashCreateDonation />
+            <DashCreateSupplies />
           </ProtectedRoute>
         ),
       },
       {
-        path: "all-donation",
+        path: "all-supplies",
         element: (
           <ProtectedRoute>
-            <DashAllDonation />
+            <DashAllSupplies />
           </ProtectedRoute>
         ),
       },

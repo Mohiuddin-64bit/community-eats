@@ -8,10 +8,10 @@ import {
   useDeleteSuppliesMutation,
   useGetAllSuppliesQuery,
 } from "../../redux/features/supplies/suppliesApi.ts";
-import Loading from "../../components/Loading";
-import { TSuppliesTypes } from "../../types/supplies.types";
+import Loading from "../../components/Loading.tsx";
+import { TSuppliesTypes } from "../../types/supplies.types.ts";
 
-const DashAllDonation = () => {
+const DashAllSupplies = () => {
   const {
     data,
     isLoading: dataLoading,
@@ -101,7 +101,7 @@ const DashAllDonation = () => {
                       )}
                     </button>
                     <Link
-                      to={`/dashboard/edit-donation/${item?._id}`}
+                      to={`/dashboard/edit-supplies/${item?._id}`}
                       className="btn btn-square btn-outline"
                     >
                       <RiEditFill className="text-info text-lg" />
@@ -117,4 +117,4 @@ const DashAllDonation = () => {
   );
 };
 
-export default DashAllDonation;
+export default DashAllSupplies;

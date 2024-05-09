@@ -26,8 +26,16 @@ const HomeBanner = () => {
           need.
         </p>
       </div>
-      <button className="absolute flex items-center gap-3 z-20 bottom-5 left-1/2 transform -translate-x-1/2 px-5 py-3 backdrop-blur-sm bg-dark/50 mb-32 hover:bg-dark transition-all text-white font-secondary text-lg rounded-lg">
-        See Our Work <MdArrowDownward className="text-secondary"/>
+      <button
+        className="absolute flex items-center gap-3 z-20 bottom-5 left-1/2 transform -translate-x-1/2 px-5 py-3 backdrop-blur-sm bg-dark/50 mb-32 hover:bg-dark transition-all text-white font-secondary text-lg rounded-lg"
+        onClick={(e) => {
+          e.preventDefault();
+          document
+            .getElementById("supplies")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        See Our Work <MdArrowDownward className="text-secondary" />
       </button>
     </div>
   );

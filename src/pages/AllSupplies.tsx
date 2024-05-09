@@ -7,7 +7,7 @@ const AllSupplies = () => {
   const { data, isLoading, isError } = useGetAllSuppliesQuery({});
 
 
-  // Function to render individual donation cards
+  // Function to render individual supplies cards
   const renderSuppliesCard = (supplies: TSuppliesTypes) => {
     return (
       <div className="w-full p-4">
@@ -35,7 +35,7 @@ const AllSupplies = () => {
                 </p>
               </div>
               <div className="w-1/5">
-                <Link to={`/donations/${supplies._id}`}>
+                <Link to={`/supplies/${supplies._id}`}>
                   <button className="btn text-light border-0">
                     View Details
                   </button>

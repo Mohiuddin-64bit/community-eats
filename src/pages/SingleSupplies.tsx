@@ -12,7 +12,7 @@ const SingleSupplies = () => {
   }
 
   if (isError) {
-    return <p className="text-red-500 text-center">Error fetching donation data!</p>;
+    return <p className="text-red-500 text-center">Error fetching supplies data!</p>;
   }
 
   return (

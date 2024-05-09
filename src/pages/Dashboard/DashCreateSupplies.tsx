@@ -9,7 +9,7 @@ import {
 } from "../../redux/features/supplies/suppliesApi";
 import Loading from "../../components/Loading";
 
-const DashCreateDonation = () => {
+const DashCreateSupplies = () => {
   const donationId = useParams().id;
   const location = useLocation();
   const navigate = useNavigate();
@@ -254,4 +254,4 @@ const DashCreateDonation = () => {
   );
 };
 
-export default DashCreateDonation;
+export default DashCreateSupplies;

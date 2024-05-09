@@ -16,7 +16,7 @@ const Footer = () => {
               alt="Organization"
             />
             <p className="font-secondary">
-              Join us in making a difference—one donation at a time.
+              Join us in making a difference—one Supplies at a time.
             </p>
           </div>
           <div className="col-span-12 lg:col-span-4">
@@ -64,7 +64,7 @@ const Footer = () => {
       <Container>
         <div className="py-5 text-center">
           <p className="font-secondary">
-            Spark of Hope © 2024 - All Rights Reserved
+            Community Eats © 2024 - All Rights Reserved
           </p>
         </div>
       </Container>

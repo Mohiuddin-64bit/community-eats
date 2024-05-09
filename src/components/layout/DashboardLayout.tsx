@@ -6,12 +6,12 @@ const NavContent = (
     <Link to="/dashboard">
       <li className="px-4 py-2 hover:bg-gray-800 cursor-pointer">Dashboard</li>
     </Link>
-    <Link to="/dashboard/create-donation">
+    <Link to="/dashboard/create-supplies">
       <li className="px-4 py-2 hover:bg-gray-800 cursor-pointer">
         Create Supplies
       </li>
     </Link>
-    <Link to="/dashboard/all-donation">
+    <Link to="/dashboard/all-supplies">
       <li className="px-4 py-2 hover:bg-gray-800 cursor-pointer">
         All Supplies
       </li>

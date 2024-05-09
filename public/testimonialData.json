@@ -1,50 +1,50 @@
-testimonialData = [
-    {
-      id: 1,
-      image: "",
-      name: "John Doe",
-      location: "New York, USA",
-      message: "Thank you for organizing such a wonderful donation drive. It truly made a difference in our community.",
-      date: "2024-04-25"
-    },
-    {
-      id: 2,
-      image: "",
-      name: "Jane Smith",
-      location: "London, UK",
-      message: "I'm grateful for the generosity shown during this disaster. Your efforts have restored hope for many.",
-      date: "2024-04-26"
-    },
-    {
-      id: 3,
-      image: "",
-      name: "Michael Johnson",
-      location: "Sydney, Australia",
-      message: "The donations we received were a lifeline during these difficult times. Thank you for your support.",
-    date: "2024-04-27"
-    },
-    {
-      id: 4,
-      image: "",
-      name: "Emily Brown",
-      location: "Toronto, Canada",
-      message: "Your dedication to helping those in need is inspiring. I'm thankful to have been a recipient of your generosity.",
-      date: "2024-04-28"
-    },
-    {
-      id: 5,
-      image: "",
-      name: "David Garcia",
-      location: "Mexico City, Mexico",
-      message: "Words cannot express my gratitude for the assistance provided during the disaster. You made a real difference.",
-      date: "2024-04-29"
-    },
-    {
-      id: 6,
-      image: "",
-      name: "Sophia Martinez",
-      location: "Berlin, Germany",
-      message: "The donations we received not only helped us materially but also lifted our spirits. Thank you for your kindness.",
-      date: "2024-04-30"
-    }
-  ];
+const testimonialData = [
+  {
+    "id": 1,
+    "image": "",
+    "name": "John Doe",
+    "location": "New York, USA",
+    "message": "Thank you for organizing such a wonderful supplies drive. It truly made a difference in our community.",
+    "date": "2024-04-25"
+  },
+  {
+    "id": 2,
+    "image": "",
+    "name": "Jane Smith",
+    "location": "London, UK",
+    "message": "I'm grateful for the generosity shown during this disaster. Your efforts have restored hope for many.",
+    "date": "2024-04-26"
+  },
+  {
+    "id": 3,
+    "image": "",
+    "name": "Michael Johnson",
+    "location": "Sydney, Australia",
+    "message": "The supplies we received were a lifeline during these difficult times. Thank you for your support.",
+    "date": "2024-04-27"
+  },
+  {
+    "id": 4,
+    "image": "",
+    "name": "Emily Brown",
+    "location": "Toronto, Canada",
+    "message": "Your dedication to helping those in need is inspiring. I'm thankful to have been a recipient of your generosity.",
+    "date": "2024-04-28"
+  },
+  {
+    "id": 5,
+    "image": "",
+    "name": "David Garcia",
+    "location": "Mexico City, Mexico",
+    "message": "Words cannot express my gratitude for the assistance provided during the disaster. You made a real difference.",
+    "date": "2024-04-29"
+  },
+  {
+    "id": 6,
+    "image": "",
+    "name": "Sophia Martinez",
+    "location": "Berlin, Germany",
+    "message": "The supplies we received not only helped us materially but also lifted our spirits. Thank you for your kindness.",
+    "date": "2024-04-30"
+  }
+];

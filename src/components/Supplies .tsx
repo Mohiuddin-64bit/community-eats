@@ -6,9 +6,9 @@ import Loading from "./Loading";
 const Supplies = () => {
   const { data, isLoading, isError } = useGetAllSuppliesQuery({});
 
-  const renderDonationCard = (supplies: TSuppliesTypes) => {
+  const renderSuppliesCard = (supplies: TSuppliesTypes) => {
     return (
-      <div className="w-full">
+      <div id="supplies" className="w-full">
         <div className="bg-primary rounded-lg overflow-hidden shadow-md">
           <img
             src={supplies.imageLink}
@@ -33,7 +33,7 @@ const Supplies = () => {
                 </p>
               </div>
               <div className="w-1/5">
-                <Link to={`/donations/${supplies._id}`}>
+                <Link to={`/supplies/${supplies._id}`}>
                   <button className="btn text-light border-0">
                     View Details
                   </button>
@@ -61,11 +61,11 @@ const Supplies = () => {
             ) : (
               data
                 ?.slice(0, 6)
-                .map((supplies: TSuppliesTypes) => renderDonationCard(supplies))
+                .map((supplies: TSuppliesTypes) => renderSuppliesCard(supplies))
             )}
           </div>
           <div className="flex justify-center mt-5 lg:mt-10 mb-5">
-            <Link to="/donations">
+            <Link to="/supplies">
               <button className="btn text-center w-3/2 bg-primary text-light">
                 View All Supplies
               </button>
