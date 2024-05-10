@@ -18,7 +18,7 @@ const DashAllSupplies = () => {
     isError: dataError,
   } = useGetAllSuppliesQuery({});
 
-  const [deleteDonation, { isLoading: deleteDonationLoading }] =
+  const [deleteSupplies, { isLoading: deleteSuppliesLoading }] =
     useDeleteSuppliesMutation();
 
   const [deletingItemId, setDeletingItemId] = useState<string | null>(null);
@@ -35,7 +35,7 @@ const DashAllSupplies = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        deleteDonation(id);
+        deleteSupplies(id);
       }
     });
   };
@@ -67,7 +67,7 @@ const DashAllSupplies = () => {
                   scope="col"
                   className="px-6 py-3 text-left text-xs font-medium text-gray-500 2plg:px-6 percase tracking-wider lg:w-1/3"
                 >
-                  Amount
+                  Quantity
                 </th>
                 <th
                   scope="col"
@@ -94,7 +94,7 @@ const DashAllSupplies = () => {
                       className="btn btn-square btn-outline mr-4"
                       onClick={() => handleDelete(item?._id)}
                     >
-                      {deletingItemId === item?._id && deleteDonationLoading ? (
+                      {deletingItemId === item?._id && deleteSuppliesLoading ? (
                         <span className="loading loading-spinner loading-md"></span>
                       ) : (
                         <IoMdTrash className="text-red-500 text-lg" />

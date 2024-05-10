@@ -25,7 +25,7 @@ const AllSupplies = () => {
               Category: {supplies.category}
             </p>
             <p className="text-white font-primary font-semibold mb-2">
-              Amount: $ {supplies.amount}
+              Quantity: {supplies.amount}
             </p>
             <div className="w-full flex justify-between">
               <div className="w-4/5 mr-4">

@@ -4,32 +4,32 @@ const suppliesAPI = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     createSupplies: builder.mutation({
       query: (data) => ({
-        url: "/donations",
+        url: "/supplies",
         method: "POST",
         body: data,
       }),
     }),
     getAllSupplies: builder.query({
       query: () => ({
-        url: "/donations",
+        url: "/supplies",
         method: "GET",
       }),
     }),
     getSingleSupplies: builder.query({
       query: (id) => ({
-        url: `/donations/${id}`,
+        url: `/supplies/${id}`,
         method: "GET",
       }),
     }),
     deleteSupplies: builder.mutation({
       query: (id) => ({
-        url: `/donations/${id}`,
+        url: `/supplies/${id}`,
         method: "DELETE",
       }),
     }),
     editSupplies: builder.mutation({
       query: ({id, data}) => ({
-        url: `/donations/${id}`,
+        url: `/supplies/${id}`,
         method: "PATCH",
         body: data
       }),

@@ -10,67 +10,67 @@ import {
 import Loading from "../../components/Loading";
 
 const DashCreateSupplies = () => {
-  const donationId = useParams().id;
+  const suppliesId = useParams().id;
   const location = useLocation();
   const navigate = useNavigate();
   const [request, setRequest] = useState(false);
 
   // Check if form is in edit mode
-  const editPage = location.pathname.includes("edit-donation");
+  const editPage = location.pathname.includes("edit-supplies");
 
   const [
-    createDonation,
-    { isLoading: createDonationLoading, error: createDonationError },
+    createSupplies,
+    { isLoading: createSuppliesLoading, error: createSuppliesError },
   ] = useCreateSuppliesMutation();
   
   const {
-    data: donationData,
-    isLoading: singleDonationLoading,
-    isError: singleDonationError,
-  } = useGetSingleSuppliesQuery(donationId, {
+    data: suppliesData,
+    isLoading: singleSuppliesLoading,
+    isError: singleSuppliesError,
+  } = useGetSingleSuppliesQuery(suppliesId, {
     skip: request,
   });
 
   const [
-    editDonation,
-    { isLoading: editDonationLoading, isError: editDonationError },
+    editSupplies,
+    { isLoading: editSuppliesLoading, isError: editSuppliesError },
   ] = useEditSuppliesMutation();
 
   //fetch edited data if it is edit page
   useEffect(() => {
-    if (editPage && donationId) {
+    if (editPage && suppliesId) {
       setRequest(true);
     }
-  }, [editPage, donationId]);  
+  }, [editPage, suppliesId]);  
 
   const [formData, setFormData] = useState({
     title: "",
     category: "",
     imageLink: "",
-    amount: "",
+    quantity: "",
     description: "",
   });
 
-  // Set form data if in edit mode and donation data is available
+  // Set form data if in edit mode and Supplies data is available
   useEffect(() => {
-    if (editPage && donationData) {
+    if (editPage && suppliesData) {
       setFormData({
-        title: donationData.title,
-        category: donationData.category,
-        imageLink: donationData.imageLink,
-        amount: donationData.amount,
-        description: donationData.description,
+        title: suppliesData.title,
+        category: suppliesData.category,
+        imageLink: suppliesData.imageLink,
+        quantity: suppliesData.quantity,
+        description: suppliesData.description,
       });
     } else {
       setFormData({
         title: "",
         category: "",
         imageLink: "",
-        amount: "",
+        quantity: "",
         description: "",
       });
     }
-  }, [editPage, donationData]);
+  }, [editPage, suppliesData]);
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -78,23 +78,23 @@ const DashCreateSupplies = () => {
 
     try {
       if (editPage) {
-        await editDonation({ id: donationId, data: formData });
+        await editSupplies({ id: suppliesId, data: formData });
         // Display success message using Swal
         Swal.fire({
           icon: "success",
-          title: "Donation updated successfully",
+          title: "Supplies updated successfully",
           showConfirmButton: false,
           timer: 2000,
           toast: true,
           position: "top-end",
         });
-        navigate("/dashboard/all-donation");
+        navigate("/dashboard/all-supplies");
       } else {
-        await createDonation(formData);
+        await createSupplies(formData);
         // Display success message using Swal
         Swal.fire({
           icon: "success",
-          title: "Donation created successfully",
+          title: "Supplies created successfully",
           showConfirmButton: false,
           timer: 2000,
           toast: true,
@@ -106,11 +106,11 @@ const DashCreateSupplies = () => {
         title: "",
         category: "",
         imageLink: "",
-        amount: "",
+        quantity: "",
         description: "",
       });
     } catch (error) {
-      console.error("Error handling donation:", error);
+      console.error("Error handling Supplies:", error);
     }
   };
 
@@ -123,12 +123,12 @@ const DashCreateSupplies = () => {
     }));
   };
 
-  return singleDonationLoading && singleDonationError ? (
+  return singleSuppliesLoading && singleSuppliesError ? (
     <Loading />
   ) : (
     <div className="container mt-4 mx-auto max-w-screen-lg p-4">
       <h2 className="text-center mb-4 font-primary font-bold text-2xl text-primary">
-        Create Donation
+        Create supplies
       </h2>
       <form className="md:grid md:grid-cols-2 md:gap-4" onSubmit={handleSubmit}>
         {/* Title */}
@@ -185,19 +185,19 @@ const DashCreateSupplies = () => {
             onChange={handleChange}
           />
         </div>
-        {/* Amount */}
+        {/* quantity */}
         <div className="md:col-span-1 mb-3">
           <label
-            htmlFor="amount"
+            htmlFor="quantity"
             className="block text-sm font-medium text-gray-700 mb-1 mt-2"
           >
-            Amount
+            Quantity
           </label>
           <input
             type="number"
-            id="amount"
-            name="amount"
-            value={formData.amount}
+            id="quantity"
+            name="quantity"
+            value={formData.quantity}
             placeholder="Type here"
             className="input input-bordered w-full bg-white text-black"
             onChange={handleChange}
@@ -225,7 +225,7 @@ const DashCreateSupplies = () => {
         <div className="md:col-span-2">
           <button
             type="submit"
-            disabled={createDonationLoading && editDonationLoading}
+            disabled={createSuppliesLoading && editSuppliesLoading}
             className="btn bg-primary border-0 text-light hover:bg-secondary w-full"
             onClick={() => {
               Swal.fire({
@@ -239,15 +239,15 @@ const DashCreateSupplies = () => {
             }}
           >
             {editPage
-              ? "Edit Donation"
-              : editDonationLoading
+              ? "Edit Supplies"
+              : editSuppliesLoading
               ? "Submitting"
-              : createDonationLoading
+              : createSuppliesLoading
               ? "Submitting"
               : "Submit"}
           </button>
-          {createDonationError && <p>Donation creation failed!</p>}
-          {editDonationError && <p>Donation editing failed!</p>}
+          {createSuppliesError && <p>Supplies creation failed!</p>}
+          {editSuppliesError && <p>Supplies editing failed!</p>}
         </div>
       </form>
     </div>

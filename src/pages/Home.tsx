@@ -1,4 +1,4 @@
-import Supplies from "../components/Supplies ";
+import Supplies from "../components/Supplies";
 import HomeBanner from "../components/HomeBanner";
 import OurAim from "../components/OurAim";
 import OurGoal from "../components/OurGoal";

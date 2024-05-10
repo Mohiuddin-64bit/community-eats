@@ -11,8 +11,8 @@ const Login = () => {
   const navigate = useNavigate();
   const [loginUser, { isLoading, isError }] = useLoginMutation();
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: "admin@gmail.com",
+    password: "483244",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

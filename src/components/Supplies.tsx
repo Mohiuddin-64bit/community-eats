@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useGetAllSuppliesQuery } from "../redux/features/supplies/suppliesApi";
 import { TSuppliesTypes } from "../types/supplies.types";
 import Loading from "./Loading";
+import { PiBowlFoodLight } from "react-icons/pi";
 
 const Supplies = () => {
   const { data, isLoading, isError } = useGetAllSuppliesQuery({});
@@ -22,8 +23,8 @@ const Supplies = () => {
             <p className="text-white font-secondary mb-2">
               Category: {supplies.category}
             </p>
-            <p className="text-white font-white font-semibold mb-2">
-              Quantity: $ {supplies.amount}
+            <p className="text-white font-white flex items-center gap-1 font-semibold mb-2">
+              Quantity: {supplies.amount} <PiBowlFoodLight />
             </p>
             <div className="w-full flex justify-between">
               <div className="w-4/5 mr-4">
