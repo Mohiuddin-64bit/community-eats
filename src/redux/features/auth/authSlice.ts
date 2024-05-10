@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "@reduxjs/toolkit/query";
+import { RootState } from "../../store";
 
 // Initial state for authentication slice
 const initialState = {
@@ -8,6 +8,7 @@ const initialState = {
   isLoading: false,
   error: null,
 };
+
 
 const authSlice = createSlice({
   name: "auth",
