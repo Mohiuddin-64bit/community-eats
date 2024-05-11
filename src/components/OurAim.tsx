@@ -4,7 +4,7 @@ const OurAim = () => {
       <div className="w-full lg:w-1/2">
         <img
           className="w-full rounded-md"
-          src="https://images.pexels.com/photos/13633962/pexels-photo-13633962.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="images/food.jpg"
           alt="Flood"
         />
       </div>

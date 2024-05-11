@@ -3,7 +3,7 @@ export interface TSuppliesTypes {
   title: string;
   category: string;
   imageLink: string;
-  amount: string;
+  quantity: string;
   description: string;
 }
 

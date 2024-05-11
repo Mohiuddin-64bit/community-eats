@@ -7,28 +7,28 @@ const suppliesAPI = baseApi.injectEndpoints({
         url: "/supplies",
         method: "POST",
         body: data,
-        mode: "no-cors",
+        // mode: "no-cors",
       }),
     }),
     getAllSupplies: builder.query({
       query: () => ({
         url: "/supplies",
         method: "GET",
-        mode: "no-cors",
+        // mode: "no-cors",
       }),
     }),
     getSingleSupplies: builder.query({
       query: (id) => ({
         url: `/supplies/${id}`,
         method: "GET",
-        mode: "no-cors",
+        // mode: "no-cors",
       }),
     }),
     deleteSupplies: builder.mutation({
       query: (id) => ({
         url: `/supplies/${id}`,
         method: "DELETE",
-        mode: "no-cors",
+        // mode: "no-cors",
       }),
     }),
     editSupplies: builder.mutation({
@@ -36,7 +36,7 @@ const suppliesAPI = baseApi.injectEndpoints({
         url: `/supplies/${id}`,
         method: "PATCH",
         body: data,
-        mode: "no-cors",
+        // mode: "no-cors",
       }),
     }),
   }),
