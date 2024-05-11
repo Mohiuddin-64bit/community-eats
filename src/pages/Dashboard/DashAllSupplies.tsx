@@ -87,7 +87,7 @@ const DashAllSupplies = () => {
                     {item?.category}
                   </td>
                   <td className="px-2 lg:px-6 py-4 whitespace-nowrap lg:w-1/3">
-                    {item?.amount}
+                    {item?.quantity}
                   </td>
                   <td className="px-2 lg:px-6 py-4 whitespace-nowrap lg:w-1/3">
                     <button

@@ -35,7 +35,7 @@ const SingleSupplies = () => {
               Category: {data?.category}
             </p>
             <p className="text-secondary lg:text-2xl font-secondary font-bold mb-2">
-              Amount: $ {data?.amount}
+              Quantity: $ {data?.quantity}
             </p>
             <p className="text-tertiary font-secondary lg:text-xl">{data?.description}</p>
           </div>
