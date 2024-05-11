@@ -71,7 +71,7 @@ const Supplies = () => {
             )}
             {!isError &&
               !isLoading &&
-              data.length > 0 &&
+              data?.length > 0 &&
               data
                 .slice(0, 6)
                 .map((supplies: TSuppliesTypes) =>
