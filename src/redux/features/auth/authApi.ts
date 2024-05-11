@@ -7,6 +7,7 @@ const authApi = baseApi.injectEndpoints({
         url: "/register",
         method: "POST",
         body: userData,
+        mode: "no-cors",
       }),
     }),
     login: builder.mutation({
@@ -14,6 +15,7 @@ const authApi = baseApi.injectEndpoints({
         url: "/login",
         method: "POST",
         body: userData,
+        mode: "no-cors",
       }),
     }),
   }),

@@ -7,6 +7,7 @@ const suppliesAPI = baseApi.injectEndpoints({
         url: "/supplies",
         method: "POST",
         body: data,
+        mode: "no-cors",
       }),
     }),
     getAllSupplies: builder.query({
@@ -27,13 +28,15 @@ const suppliesAPI = baseApi.injectEndpoints({
       query: (id) => ({
         url: `/supplies/${id}`,
         method: "DELETE",
+        mode: "no-cors",
       }),
     }),
     editSupplies: builder.mutation({
       query: ({id, data}) => ({
         url: `/supplies/${id}`,
         method: "PATCH",
-        body: data
+        body: data,
+        mode: "no-cors",
       }),
     }),
   }),
