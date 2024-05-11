@@ -13,12 +13,14 @@ const suppliesAPI = baseApi.injectEndpoints({
       query: () => ({
         url: "/supplies",
         method: "GET",
+        mode: "no-cors",
       }),
     }),
     getSingleSupplies: builder.query({
       query: (id) => ({
         url: `/supplies/${id}`,
         method: "GET",
+        mode: "no-cors",
       }),
     }),
     deleteSupplies: builder.mutation({
