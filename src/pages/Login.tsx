@@ -23,49 +23,15 @@ const Login = () => {
     });
   };
 
-  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-
-  //   e.preventDefault();
-  //   try {
-  //     const result = await loginUser(formData);
-  //     if ("data" in result) {
-  //       const user = verifyToken(result.data.token);
-
-  //       dispatch(setUser({ user: user, token: result.data.token }));
-  //       navigate("/");
-  //     } else {
-  //       console.error("Login failed:", result.error);
-  //     }
-  //   } catch (error) {
-  //     console.error("Login failed:", error);
-  //   }
-  //   // Clear form after submission
-  //   setFormData({
-  //     email: "",
-  //     password: "",
-  //   });
-  // };
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+
     e.preventDefault();
-
     try {
-      const response = await fetch(
-        "https://community-eats-backend.vercel.app/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const result = await loginUser(formData);
+      if ("data" in result) {
+        const user = verifyToken(result.data.token);
 
-      const result = await response.json();
-
-      if (response.ok) {
-        const user = verifyToken(result.token);
-        dispatch(setUser({ user: user, token: result.token }));
+        dispatch(setUser({ user: user, token: result.data.token }));
         navigate("/");
       } else {
         console.error("Login failed:", result.error);
@@ -73,13 +39,47 @@ const Login = () => {
     } catch (error) {
       console.error("Login failed:", error);
     }
-
     // Clear form after submission
     setFormData({
       email: "",
       password: "",
     });
   };
+
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+
+  //   try {
+  //     const response = await fetch(
+  //       "https://community-eats-backend.vercel.app/login",
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify(formData),
+  //       }
+  //     );
+
+  //     const result = await response.json();
+
+  //     if (response.ok) {
+  //       const user = verifyToken(result.token);
+  //       dispatch(setUser({ user: user, token: result.token }));
+  //       navigate("/");
+  //     } else {
+  //       console.error("Login failed:", result.error);
+  //     }
+  //   } catch (error) {
+  //     console.error("Login failed:", error);
+  //   }
+
+  //   // Clear form after submission
+  //   setFormData({
+  //     email: "",
+  //     password: "",
+  //   });
+  // };
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
