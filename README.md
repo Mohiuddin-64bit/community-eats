@@ -2,6 +2,10 @@
 
 Community Eats is a comprehensive web application built with React.js, Tailwind CSS, DaisyUI, Redux Toolkit, and RTK Query. It provides a platform for community members to share, manage, and interact with various food supplies.
 
+## Login Authentication Credentials
+- email: admin@gmail.com
+- password: 483244
+
 ## Features
 
 - Dashboard: A comprehensive overview of all activities.
