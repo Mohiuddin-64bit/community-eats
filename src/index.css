@@ -20,6 +20,20 @@ body {
   transition: color 0.3s ease;
 }
 
+
+.swiper-button-prev{
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+.swiper-button-next{
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}
+
 .link-with-border::after {
   content: "";
   position: absolute;
@@ -114,3 +128,13 @@ body {
   left: 0%;
   right: 0%;
 }
+
+.card_fade-in {
+  background-image: linear-gradient(to bottom, #212126, rgba(6, 6, 12, .71) 15%, rgba(6, 6, 12, 0) 26%);
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+

@@ -67,13 +67,6 @@ const AllSupplies = () => {
                   RenderSuppliesCard(supplies)
                 )}
           </div>
-          <div className="flex justify-center mt-5 lg:mt-10 mb-5">
-            <Link to="/supplies">
-              <button className="btn text-center w-3/2 bg-primary text-light">
-                View All Supplies
-              </button>
-            </Link>
-          </div>
         </>
       )}
     </div>

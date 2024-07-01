@@ -1,15 +1,19 @@
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
+
 const OurAim = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="container mx-auto flex flex-col lg:flex-row gap-10 lg:gap-20 my-5 lg:my-16">
-      <div className="w-full lg:w-1/2">
-        <img
-          className="w-full rounded-md"
-          src="images/food.jpg"
-          alt="Flood"
-        />
+      <div data-aos="fade-right" data-aos-delay="300" className="w-full lg:w-1/2">
+        <img className="w-full rounded-md" src="images/food.jpg" alt="Flood" />
       </div>
       <div className="w-full lg:w-1/2 flex flex-col justify-center px-5 lg:px-0">
-        <h1 className="flex flex-col lg:gap-3 text-2xl lg:text-5xl font-bold font-primary text-white leading-10">
+        <h1 className="flex flex-col lg:gap-3 text-2xl lg:text-4xl font-bold font-primary text-white leading-10">
           We aim to better lives <span>and the world</span>{" "}
           <span>through kindness</span>
         </h1>
